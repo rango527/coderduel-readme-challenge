@@ -3,7 +3,7 @@
 ![Starlight Header](images/night_sky.jpg)
 *“Paint the night sky with code. Create stunning, interactive starry visualizations in your browser.”*
 
-[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight/index.jsx)
+[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight)
 [![GitHub Issues](https://img.shields.io/github/issues/rango527/coderduel-readme-challenge.svg)](https://github.com/rango527/coderduel-readme-challenge/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/github/workflow/status/rango527/coderduel-readme-challenge/CI)](https://github.com/rango527/coderduel-readme-challenge/actions)
@@ -173,7 +173,7 @@ export default {
 - `starClick`: Fired when a star is clicked. Payload: `{ star: StarObject }`
 - `constellationHover`: Fired on constellation hover.
 
-For full API docs, visit: [API Documentation](https://github.com/rango527/coderduel-readme-challenge/tree/main/docs/index.html)
+For full API docs, visit: [API Documentation](https://rango527.github.io/coderduel-readme-challenge/)
 
 ## 🤝 Contributing
 

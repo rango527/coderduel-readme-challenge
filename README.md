@@ -3,7 +3,7 @@
 ![Starlight Header](images/night_sky.jpg)
 *“Paint the night sky with code. Create stunning, interactive starry visualizations in your browser.”*
 
-[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/starlight)
+[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight)
 [![GitHub Issues](https://img.shields.io/github/issues/rango527/coderduel-readme-challenge.svg)](https://github.com/rango527/coderduel-readme-challenge/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/github/workflow/status/rango527/coderduel-readme-challenge/CI)](https://github.com/rango527/coderduel-readme-challenge/actions)
@@ -37,9 +37,147 @@ Get Starlight up and running in **3 minutes**! No rocket science required—just
 
 ### Installation
 
+
+
 ## 📖 Usage Examples
 
 Dive into the cosmos with these examples. Copy-paste and customize to your heart's content!
+
+### Basic Sky
+
+Create a simple night sky with 100 stars:
+```javascript
+const sky = new Starlight({
+  canvas: document.getElementById('my-canvas'),
+  stars: 100,
+  theme: 'default'
+});
+sky.render();
+```
+
+### Advanced Customization
+
+Add planets, custom colors, and animations:
+```javascript
+const sky = new Starlight({
+  canvas: document.getElementById('my-canvas'),
+  stars: 1000,
+  constellations: ['Orion', 'Ursa Major', 'Cassiopeia'],
+  planets: [{ name: 'Mars', color: '#CD5C5C', size: 5 }],
+  theme: 'aurora', // Custom theme with northern lights effect
+  animations: {
+    twinkle: true,
+    shootingStars: true
+  }
+});
+sky.render();
+
+// Add interactivity
+sky.on('starClick', (star) => {
+  console.log(`Clicked on ${star.name}!`);
+});
+```
+
+### Integrating with Frameworks
+
+**React Example**:
+```jsx
+import React, { useEffect, useRef } from 'react';
+import Starlight from 'starlight';
+
+const StarryComponent = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const sky = new Starlight({
+      canvas: canvasRef.current,
+      stars: 200
+    });
+    sky.render();
+  }, []);
+
+  return <canvas ref={canvasRef} />;
+};
+
+export default StarryComponent;
+```
+
+**Vue Example**:
+```vue
+<template>
+  <canvas ref="starlightCanvas"></canvas>
+</template>
+
+<script>
+import Starlight from 'starlight';
+
+export default {
+  mounted() {
+    const sky = new Starlight({
+      canvas: this.$refs.starlightCanvas,
+      stars: 300
+    });
+    sky.render();
+  }
+};
+</script>
+```
+
+## 🔧 API Reference
+
+### Constructor Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `canvas` | `HTMLCanvasElement` | Required | The canvas element to render on. |
+| `stars` | `number` | `100` | Number of stars to generate. |
+| `constellations` | `string[]` | `[]` | Array of constellation names to draw. |
+| `planets` | `Planet[]` | `[]` | Array of planet objects. |
+| `theme` | `string` | `'default'` | Color theme ('default', 'midnight', 'aurora'). |
+| `animations` | `object` | `{}` | Animation settings (twinkle, shootingStars). |
+
+### Methods
+
+- `render()`: Renders the sky on the canvas.
+- `update(options)`: Updates the sky with new options.
+- `destroy()`: Cleans up the instance.
+
+### Events
+
+- `starClick`: Fired when a star is clicked. Payload: `{ star: StarObject }`
+- `constellationHover`: Fired on constellation hover.
+
+For full API docs, visit: [API Documentation](https://github.com/rango527/coderduel-readme-challenge/tree/main/docs)
+
+## 🤝 Contributing
+
+We love cosmic contributions! 🌌 Whether it's fixing a bug, adding a feature, or improving docs, your help makes Starlight shine brighter.
+
+### How to Contribute
+
+1. **Fork** the repo on GitHub.
+2. **Clone** your fork: `git clone https://github.com/rango527/coderduel-readme-challenge.git`
+3. **Create a branch**: `git checkout -b feature/amazing-new-feature`
+4. **Make changes** and test thoroughly.
+5. **Commit**: `git commit -m "Add amazing new feature"`
+6. **Push**: `git push origin feature/amazing-new-feature`
+7. **Open a Pull Request**!
+
+### Development Setup
+
+```bash
+npm install
+npm run dev  # Start dev server
+npm test     # Run tests
+npm run build # Build for production
+```
+
+### Guidelines
+
+- Follow the existing code style (ESLint config included).
+- Add tests for new features.
+- Update documentation for API changes.
+- Be kind and respectful in discussions.
 
 ## 📄 License
 
@@ -56,7 +194,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Got questions? Ideas? Or just want to chat about the starlight?
 
 - **Email**: [ncao9127@gmail.com](mailto:ncao9127@gmail.com)
-- **Phone**: [(334) 583-0692](tel:+13345830692)
+- **Phone**: <a href="tel:+13345830692">(334) 583-0692</a>
 - **Github**: [@rango527](https://github.com/rango527)
 
 ---

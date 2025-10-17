@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight API Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Starlight API Documentation</h1>
+    <p>Welcome to the official API documentation for Starlight, the JavaScript library for creating interactive starry sky visualizations.</p>
+
+    <h2>Constructor</h2>
+    <p>Create a new Starlight instance:</p>
+    <pre><code>const sky = new Starlight(options);</code></pre>
+
+    <h2>Constructor Options</h2>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>canvas</code></td>
+            <td><code>HTMLCanvasElement</code></td>
+            <td>Required</td>
+            <td>The canvas element to render on.</td>
+        </tr>
+        <tr>
+            <td><code>stars</code></td>
+            <td><code>number</code></td>
+            <td><code>100</code></td>
+            <td>Number of stars to generate.</td>
+        </tr>
+        <tr>
+            <td><code>constellations</code></td>
+            <td><code>string[]</code></td>
+            <td><code>[]</code></td>
+            <td>Array of constellation names to draw.</td>
+        </tr>
+        <tr>
+            <td><code>planets</code></td>
+            <td><code>Planet[]</code></td>
+            <td><code>[]</code></td>
+            <td>Array of planet objects.</td>
+        </tr>
+        <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'default'</code></td>
+            <td>Color theme ('default', 'midnight', 'aurora').</td>
+        </tr>
+        <tr>
+            <td><code>animations</code></td>
+            <td><code>object</code></td>
+            <td><code>{}</code></td>
+            <td>Animation settings (twinkle, shootingStars).</td>
+        </tr>
+    </table>
+
+    <h2>Methods</h2>
+    <ul>
+        <li><code>render()</code>: Renders the sky on the canvas.</li>
+        <li><code>update(options)</code>: Updates the sky with new options.</li>
+        <li><code>destroy()</code>: Cleans up the instance.</li>
+    </ul>
+
+    <h2>Events</h2>
+    <ul>
+        <li><code>starClick</code>: Fired when a star is clicked. Payload: <code>{ star: StarObject }</code></li>
+        <li><code>constellationHover</code>: Fired on constellation hover.</li>
+    </ul>
+
+    <p>For more examples and usage, check the main README.</p>
+</body>
+</html>

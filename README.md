@@ -3,7 +3,7 @@
 ![Starlight Header](images/night_sky.jpg)
 *“Paint the night sky with code. Create stunning, interactive starry visualizations in your browser.”*
 
-[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight)
+[![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight/index.jsx)
 [![GitHub Issues](https://img.shields.io/github/issues/rango527/coderduel-readme-challenge.svg)](https://github.com/rango527/coderduel-readme-challenge/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/github/workflow/status/rango527/coderduel-readme-challenge/CI)](https://github.com/rango527/coderduel-readme-challenge/actions)
@@ -37,7 +37,33 @@ Get Starlight up and running in **3 minutes**! No rocket science required—just
 
 ### Installation
 
+1. **Install via npm** (recommended for projects):
+   ```bash
+   npm install starlight
+   ```
 
+2. **Or use a CDN** (for quick prototyping):
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/starlight@1.0.0/dist/starlight.min.js"></script>
+   ```
+
+3. **Add a canvas to your HTML**:
+   ```html
+   <canvas id="starlight-canvas" width="800" height="600"></canvas>
+   ```
+
+4. **Initialize Starlight**:
+   ```javascript
+   const sky = new Starlight({
+     canvas: document.getElementById('starlight-canvas'),
+     stars: 500,
+     constellations: ['Orion', 'Ursa Major'],
+     theme: 'midnight'
+   });
+   sky.render();
+   ```
+
+That’s it! You’re now gazing at a starry sky. ✨
 
 ## 📖 Usage Examples
 
@@ -147,7 +173,7 @@ export default {
 - `starClick`: Fired when a star is clicked. Payload: `{ star: StarObject }`
 - `constellationHover`: Fired on constellation hover.
 
-For full API docs, visit: [API Documentation](https://github.com/rango527/coderduel-readme-challenge/tree/main/docs)
+For full API docs, visit: [API Documentation](https://github.com/rango527/coderduel-readme-challenge/tree/main/docs/index.html)
 
 ## 🤝 Contributing
 
@@ -181,7 +207,7 @@ npm run build # Build for production
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rango527/coderduel-readme-challenge/tree/main/LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 

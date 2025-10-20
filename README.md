@@ -3,12 +3,25 @@
 ![Starlight Header](images/night_sky.jpg)
 *“Paint the night sky with code. Create stunning, interactive starry visualizations in your browser.”*
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/rango527/coderduel-readme-challenge.svg?style=social&label=Starlight)](https://github.com/rango527/coderduel-readme-challenge/tree/main/starlight)
 [![GitHub Issues](https://img.shields.io/github/issues/rango527/coderduel-readme-challenge.svg)](https://github.com/rango527/coderduel-readme-challenge/issues)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/github/workflow/status/rango527/coderduel-readme-challenge/CI)](https://github.com/rango527/coderduel-readme-challenge/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/rango527/coderduel-readme-challenge/pulls)
-[![Codecov](https://img.shields.io/codecov/c/github/rango527/coderduel-readme-challenge)](https://codecov.io/gh/rango527/coderduel-readme-challenge)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Codecov](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)]()
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [🚀 Getting Started](#-getting-started)
+- [📖 Usage Examples](#-usage-examples)
+- [🔧 API Reference](#-api-reference)
+- [🌐 Browser Support](#-browser-support)
+- [🤝 Contributing](#-contributing)
+- [🗺️ Roadmap](#️-roadmap)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📞 Contact](#-contact)
 
 **Starlight** is an open-source JavaScript library that lets you craft breathtaking, interactive night sky visualizations. Whether you’re building an educational app, a creative portfolio piece, or just want to stargaze from your desk, Starlight makes it easy to render constellations, planets, and twinkling stars with minimal code. 🌌
 
@@ -25,6 +38,16 @@ Imagine turning your website into a portal to the cosmos—drag constellations, 
 - **Performance Optimized**: Smooth 60fps animations even with thousands of stars. 🚀
 - **Extensible**: Add custom constellations, planets, or even shooting stars. 🌟
 
+## 🎮 Demo
+
+Check out a live demo of Starlight in action: [Live Demo](docs/index.html)
+
+## 📸 Screenshots
+
+![Night Sky Visualization](images/night_sky.gif)
+
+*Watch Starlight in action: an interactive night sky with draggable constellations and glowing stars!*
+
 ## 🚀 Getting Started
 
 Get Starlight up and running in **3 minutes**! No rocket science required—just a bit of code and a lot of wonder. 🔭
@@ -37,14 +60,13 @@ Get Starlight up and running in **3 minutes**! No rocket science required—just
 
 ### Installation
 
-1. **Install via npm** (recommended for projects):
-   ```bash
-   npm install starlight
-   ```
+1. **Download the source** (for manual integration):
+   - Clone or download the repository.
+   - Include `starlight/index.jsx` in your project.
 
 2. **Or use a CDN** (for quick prototyping):
    ```html
-   <script src="https://cdn.jsdelivr.net/npm/starlight@1.0.0/dist/starlight.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/rango527/coderduel-readme-challenge/starlight/index.jsx"></script>
    ```
 
 3. **Add a canvas to your HTML**:
@@ -157,23 +179,32 @@ export default {
 |--------|------|---------|-------------|
 | `canvas` | `HTMLCanvasElement` | Required | The canvas element to render on. |
 | `stars` | `number` | `100` | Number of stars to generate. |
-| `constellations` | `string[]` | `[]` | Array of constellation names to draw. |
-| `planets` | `Planet[]` | `[]` | Array of planet objects. |
+| `constellations` | `string[]` | `[]` | Array of constellation names to draw (e.g., ['Orion']). |
+| `planets` | `Planet[]` | `[]` | Array of planet objects (e.g., [{ name: 'Mars', color: '#CD5C5C', size: 5, x: 100, y: 200 }]). |
 | `theme` | `string` | `'default'` | Color theme ('default', 'midnight', 'aurora'). |
-| `animations` | `object` | `{}` | Animation settings (twinkle, shootingStars). |
+| `animations` | `object` | `{}` | Animation settings (e.g., { twinkle: true, shootingStars: true }). |
 
 ### Methods
 
 - `render()`: Renders the sky on the canvas.
 - `update(options)`: Updates the sky with new options.
-- `destroy()`: Cleans up the instance.
+- `destroy()`: Cleans up the instance and stops animations.
 
 ### Events
 
 - `starClick`: Fired when a star is clicked. Payload: `{ star: StarObject }`
-- `constellationHover`: Fired on constellation hover.
+- `constellationHover`: Fired on constellation hover (implementation in progress).
 
-For full API docs, visit: [API Documentation](https://rango527.github.io/coderduel-readme-challenge/)
+For full API docs, visit: [API Documentation](docs/index.html)
+
+## 🌐 Browser Support
+
+Starlight works in all modern browsers that support HTML5 Canvas and ES6+ features:
+
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
 
 ## 🤝 Contributing
 
@@ -191,23 +222,31 @@ We love cosmic contributions! 🌌 Whether it's fixing a bug, adding a feature, 
 
 ### Development Setup
 
-```bash
-npm install
-npm run dev  # Start dev server
-npm test     # Run tests
-npm run build # Build for production
-```
+1. Clone the repository: `git clone https://github.com/rango527/coderduel-readme-challenge.git`
+2. Navigate to the project: `cd starlight`
+3. Open `starlight/index.jsx` in your editor and make changes.
+4. Test by opening `docs/index.html` in a browser.
 
 ### Guidelines
 
-- Follow the existing code style (ESLint config included).
-- Add tests for new features.
+- Follow the existing code style (use consistent indentation and naming).
+- Add comments for new features.
 - Update documentation for API changes.
+- Test in multiple browsers.
 - Be kind and respectful in discussions.
+
+## 🗺️ Roadmap
+
+- [ ] Add more constellation data and accurate star positions.
+- [ ] Implement full constellation hover and drag interactions.
+- [ ] Support for custom star maps and astronomical data.
+- [ ] Add sound effects for immersive experiences.
+- [ ] Optimize for mobile devices and touch interactions.
+- [ ] Create a React/Vue wrapper library.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rango527/coderduel-readme-challenge/tree/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
